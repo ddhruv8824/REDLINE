@@ -1,0 +1,64 @@
+{
+  "contact": {
+    "name": "Jordan Rivera",
+    "email": "jordan.rivera@example.com",
+    "phone": "",
+    "location": "Remote",
+    "linkedin": "linkedin.com/in/jordan-rivera-example",
+    "github": "github.com/jordan-rivera-example",
+    "website": ""
+  },
+  "summary": "Software engineer with 5 years of experience building web products and the APIs behind them. Enjoys turning messy requirements into simple, reliable systems and working closely with design and product.",
+  "experience": [
+    {
+      "company": "Northwind Labs",
+      "title": "Software Engineer",
+      "location": "Remote",
+      "start_date": "Mar 2022",
+      "end_date": "Present",
+      "tools": ["Python", "FastAPI", "PostgreSQL", "React", "TypeScript", "Docker", "AWS"],
+      "bullets": [
+        "Built the billing service in Python and FastAPI that processes 40k invoices a month.",
+        "Rebuilt the customer dashboard in React and TypeScript, cutting page load time by 45%.",
+        "Moved deployments to Docker on AWS, reducing release time from 2 hours to 15 minutes.",
+        "Mentored 3 junior engineers through code reviews and pairing sessions."
+      ]
+    },
+    {
+      "company": "Brightline Studio",
+      "title": "Junior Developer",
+      "location": "Lisbon, Portugal",
+      "start_date": "Jul 2020",
+      "end_date": "Feb 2022",
+      "tools": ["JavaScript", "Node.js", "MongoDB", "Git"],
+      "bullets": [
+        "Developed REST APIs in Node.js for 6 client web apps.",
+        "Wrote automated tests that raised coverage from 30% to 75%.",
+        "Worked directly with clients to scope features and estimate timelines."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Shelfie",
+      "tech": ["Next.js", "Supabase", "OpenAI API"],
+      "link": "github.com/jordan-rivera-example/shelfie",
+      "start_date": "2023",
+      "end_date": "",
+      "bullets": [
+        "Built a book-tracking app with AI reading recommendations, used by 1,200 readers."
+      ]
+    }
+  ],
+  "skills": ["Python", "TypeScript", "JavaScript", "React", "FastAPI", "Node.js", "PostgreSQL", "MongoDB", "Docker", "AWS", "Git"],
+  "education": [
+    {
+      "institution": "University of Porto",
+      "degree": "B.Sc.",
+      "field_of_study": "Computer Science",
+      "dates": "2016 – 2020",
+      "gpa": ""
+    }
+  ],
+  "certifications": []
+}

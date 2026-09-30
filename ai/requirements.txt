@@ -1,0 +1,15 @@
+# ai/ — LangChain chat models, LangGraph graphs and their SQLite checkpointer
+langchain-core>=1.6
+langchain-google-genai>=4.4
+langchain-openai>=1.6
+langchain-anthropic>=1.7
+langchain-groq>=1.1
+langgraph>=1.2
+langgraph-checkpoint-sqlite>=3.1
+aiosqlite>=0.22
+
+# Provider SDKs, used directly only to list models when checking a key
+google-genai>=1.20
+anthropic>=1.8,<2
+openai>=3.19,<4
+groq>=0.30

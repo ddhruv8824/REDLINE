@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* "Architectural Monolith" design tokens — see README → Design. Use these, never raw hex. */
+@theme {
+  --color-am-ink: oklch(0.1859 0.0069 258.4);
+  --color-am-surface: oklch(0.2808 0.0113 237.1);
+  --color-am-coral: oklch(0.7426 0.1568 29.7);
+  --color-am-canvas: oklch(0.947 0.0074 80.7);
+  --color-am-success: oklch(0.747 0.113 160);
+  --color-am-muted: oklch(0.726 0.008 80);
+  --color-am-accent: oklch(0.35 0.016 240);
+  --color-am-destructive: oklch(0.577 0.245 27.3);
+  --color-am-border: oklch(0.947 0.0074 80.7 / 0.12);
+  --color-am-input: oklch(0.947 0.0074 80.7 / 0.22);
+
+  --font-am-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-am-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-am-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-am-paper: Helvetica, Arial, sans-serif; /* matches the downloadable PDF */
+
+  --radius-am-sm: 2px;
+  --radius-am-md: 4px;
+  --radius-am-lg: 6px;
+  --radius-am-xl: 10px;
+
+  /* Subtle entrance for cards that follow an AI reply (no bounce). */
+  --animate-am-fade-in: am-fade-in 180ms ease-out both;
+  @keyframes am-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(2px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@layer base {
+  html,
+  body {
+    background-color: var(--color-am-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  .am-workspace {
+    color-scheme: dark; /* dark native scrollbars, selects and form controls */
+  }
+  .am-workspace * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-am-accent) transparent;
+  }
+  .am-workspace :focus-visible {
+    outline: 1px solid var(--color-am-coral);
+    outline-offset: 1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .am-workspace *,
+  .am-workspace *::before,
+  .am-workspace *::after {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print only the resume paper. */
+@media print {
+  body:has(#resume-document) * {
+    visibility: hidden;
+  }
+  #resume-document,
+  #resume-document * {
+    visibility: visible;
+  }
+  #resume-document {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    background: var(--color-am-canvas) !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  #resume-document [data-changed] {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
